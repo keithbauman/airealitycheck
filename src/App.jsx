@@ -489,7 +489,7 @@ export default function App() {
             onMouseEnter={e => { e.target.style.transform = "scale(1.04)"; e.target.style.boxShadow = "0 0 40px #b8860b40"; }}
             onMouseLeave={e => { e.target.style.transform = "scale(1)"; e.target.style.boxShadow = "0 0 30px #b8860b20"; }}
           >
-            Start Diagnostic
+            Start Reality Check
           </button>
         </FadeIn>
         <FadeIn delay={550}>
