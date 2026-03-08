@@ -166,7 +166,7 @@ function WeekComparison({ stage, timeLeak }) {
         background: pattern || color,
         minWidth: 4, transition: "width 1s ease",
       }} />
-      <span style={{ fontSize: 13, color: "#888", whiteSpace: "nowrap" }}>
+      <span style={{ fontSize: 15, color: "#888", whiteSpace: "nowrap" }}>
         {label} <span style={{ color: "#ccc" }}>{hours}h</span>
       </span>
     </div>
@@ -179,20 +179,20 @@ function WeekComparison({ stage, timeLeak }) {
       border: "1px solid #1e1e1e",
     }}>
       <div>
-        <div style={{ fontSize: 13, textTransform: "uppercase", letterSpacing: 2, color: "#555", marginBottom: 14, fontFamily: "'JetBrains Mono', monospace" }}>Your Current Week</div>
+        <div style={{ fontSize: 14, textTransform: "uppercase", letterSpacing: 2, color: "#555", marginBottom: 14, fontFamily: "'JetBrains Mono', monospace" }}>Your Current Week</div>
         <Bar color="#ef4444" label="AI could handle" hours={redHours} />
         <Bar color="#eab308" label="AI could assist" hours={yellowHours} />
         <Bar color="#22c55e" label="Only you" hours={greenHours} />
-        <div style={{ marginTop: 12, paddingTop: 10, borderTop: "1px solid #222", fontSize: 13, color: "#888" }}>
+        <div style={{ marginTop: 12, paddingTop: 10, borderTop: "1px solid #222", fontSize: 15, color: "#888" }}>
           Hours on high-leverage work: <span style={{ color: "#fff", fontWeight: 600 }}>{greenHours}h/week</span>
         </div>
       </div>
       <div>
-        <div style={{ fontSize: 13, textTransform: "uppercase", letterSpacing: 2, color: "#555", marginBottom: 14, fontFamily: "'JetBrains Mono', monospace" }}>Stage 4's Week</div>
+        <div style={{ fontSize: 14, textTransform: "uppercase", letterSpacing: 2, color: "#555", marginBottom: 14, fontFamily: "'JetBrains Mono', monospace" }}>Stage 4's Week</div>
         <Bar color="transparent" label="Recovered" hours={s4Recovered} pattern="repeating-linear-gradient(135deg, #1a1a2e 0px, #1a1a2e 4px, #0f0f1a 4px, #0f0f1a 8px)" />
         <Bar color="#b8860b" label="AI-assisted" hours={s4Yellow} />
         <Bar color="#22c55e" label="Deep work" hours={s4Green} />
-        <div style={{ marginTop: 12, paddingTop: 10, borderTop: "1px solid #222", fontSize: 13, color: "#888" }}>
+        <div style={{ marginTop: 12, paddingTop: 10, borderTop: "1px solid #222", fontSize: 15, color: "#888" }}>
           Hours on high-leverage work: <span style={{ color: "#b8860b", fontWeight: 600 }}>{s4Green}h/week</span>
         </div>
       </div>
@@ -222,7 +222,7 @@ function StageBar({ currentStage }) {
             )}
           </div>
           <div style={{
-            fontSize: 12, marginTop: 8,
+            fontSize: 13, marginTop: 8,
             color: i === currentStage ? "#b8860b" : "#444",
             fontFamily: "'JetBrains Mono', monospace",
             letterSpacing: 0.5,
@@ -253,12 +253,12 @@ function DollarCostCard({ timeLeak }) {
       border: "1px solid #1e1e1e",
     }}>
       <div style={{
-        fontSize: 13, textTransform: "uppercase", letterSpacing: 2,
+        fontSize: 14, textTransform: "uppercase", letterSpacing: 2,
         color: "#555", marginBottom: 16, fontFamily: "'JetBrains Mono', monospace",
       }}>
         What That Costs You
       </div>
-      <div style={{ fontSize: 14, color: "#888", marginBottom: 16, lineHeight: 1.5 }}>
+      <div style={{ fontSize: 16, color: "#888", marginBottom: 16, lineHeight: 1.5 }}>
         Select your approximate annual compensation to see what {timeLeak.weekly} lost hours/week actually costs.
       </div>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 20 }}>
@@ -271,7 +271,7 @@ function DollarCostCard({ timeLeak }) {
               border: `1px solid ${selectedSalary === s.value ? "#b8860b" : "#262626"}`,
               background: selectedSalary === s.value ? "#b8860b18" : "transparent",
               color: selectedSalary === s.value ? "#b8860b" : "#777",
-              fontSize: 14, cursor: "pointer",
+              fontSize: 15, cursor: "pointer",
               fontFamily: "'JetBrains Mono', monospace",
               transition: "all 0.2s ease",
             }}
@@ -295,7 +295,7 @@ function DollarCostCard({ timeLeak }) {
             </span>
             <span style={{ fontSize: 16, color: "#666" }}>/year</span>
           </div>
-          <div style={{ fontSize: 14, color: "#888", marginTop: 10, lineHeight: 1.6 }}>
+          <div style={{ fontSize: 16, color: "#888", marginTop: 10, lineHeight: 1.6 }}>
             That's the value of the time you're spending on work AI could handle — gone.
             Not in mistakes or bad hires. In hours you didn't realize you were losing.
           </div>
@@ -327,8 +327,8 @@ function EmailCapture({ stageIdx }) {
         border: "1px solid #2a2010", textAlign: "center",
       }}>
         <div style={{ fontSize: 28, marginBottom: 10, color: "#b8860b" }}>&#10003;</div>
-        <div style={{ fontSize: 17, color: "#ccc", fontWeight: 600 }}>You're in.</div>
-        <div style={{ fontSize: 14, color: "#777", marginTop: 8, lineHeight: 1.5 }}>
+        <div style={{ fontSize: 19, color: "#ccc", fontWeight: 600 }}>You're in.</div>
+        <div style={{ fontSize: 15, color: "#777", marginTop: 8, lineHeight: 1.5 }}>
           Your Stage {stageIdx + 1} action plan hits your inbox shortly.
         </div>
       </div>
@@ -341,15 +341,15 @@ function EmailCapture({ stageIdx }) {
       border: "1px solid #2a2010",
     }}>
       <div style={{
-        fontSize: 13, textTransform: "uppercase", letterSpacing: 2,
+        fontSize: 14, textTransform: "uppercase", letterSpacing: 2,
         color: "#b8860b", marginBottom: 12, fontFamily: "'JetBrains Mono', monospace",
       }}>
         Go Further
       </div>
-      <div style={{ fontSize: 18, color: "#eee", fontWeight: 600, marginBottom: 6, lineHeight: 1.3 }}>
+      <div style={{ fontSize: 20, color: "#eee", fontWeight: 600, marginBottom: 6, lineHeight: 1.3 }}>
         Get your Stage {stageIdx + 1} action plan — 5 days, one move per day.
       </div>
-      <div style={{ fontSize: 14, color: "#777", marginBottom: 20, lineHeight: 1.5 }}>
+      <div style={{ fontSize: 16, color: "#777", marginBottom: 20, lineHeight: 1.5 }}>
         Specific to where you actually are. Not a newsletter. Not a course pitch.
         Five concrete actions calibrated to your score.
       </div>
@@ -451,7 +451,7 @@ export default function App() {
         {fontLink}
         <FadeIn>
           <div style={{
-            fontSize: 16, textTransform: "uppercase", letterSpacing: 5,
+            fontSize: 17, textTransform: "uppercase", letterSpacing: 5,
             color: "#b8860b", marginBottom: 28, fontFamily: "'JetBrains Mono', monospace",
             textAlign: "center",
           }}>
@@ -470,7 +470,7 @@ export default function App() {
         </FadeIn>
         <FadeIn delay={300}>
           <p style={{
-            color: "#999", fontSize: 17, maxWidth: 420, textAlign: "center",
+            color: "#999", fontSize: 19, maxWidth: 420, textAlign: "center",
             lineHeight: 1.6, marginTop: 20, marginBottom: 36,
           }}>
             10 questions. One number.
@@ -481,7 +481,7 @@ export default function App() {
             onClick={() => setScreen("quiz")}
             style={{
               background: "#b8860b", color: "#fff", border: "none",
-              padding: "14px 40px", borderRadius: 8, fontSize: 15,
+              padding: "14px 40px", borderRadius: 8, fontSize: 17,
               fontWeight: 600, cursor: "pointer", fontFamily: "'DM Sans', sans-serif",
               transition: "transform 0.15s ease, box-shadow 0.15s ease",
               boxShadow: "0 0 30px #b8860b20",
@@ -493,7 +493,7 @@ export default function App() {
           </button>
         </FadeIn>
         <FadeIn delay={550}>
-          <div style={{ fontSize: 15, color: "#888", marginTop: 48, fontFamily: "'JetBrains Mono', monospace" }}>
+          <div style={{ fontSize: 16, color: "#888", marginTop: 48, fontFamily: "'JetBrains Mono', monospace" }}>
             Takes about 2 minutes
           </div>
         </FadeIn>
@@ -513,7 +513,7 @@ export default function App() {
         {fontLink}
         <div style={{ maxWidth: 520, width: "100%", margin: "0 auto", marginBottom: 48 }}>
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-            <span style={{ fontSize: 13, color: "#555", fontFamily: "'JetBrains Mono', monospace", letterSpacing: 1 }}>
+            <span style={{ fontSize: 14, color: "#555", fontFamily: "'JetBrains Mono', monospace", letterSpacing: 1 }}>
               {current + 1} / {QUESTIONS.length}
             </span>
           </div>
@@ -528,7 +528,7 @@ export default function App() {
         <div style={{ maxWidth: 520, width: "100%", margin: "0 auto", flex: 1, display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
           <FadeIn key={current}>
             <h2 style={{
-              fontSize: "clamp(20px, 5vw, 26px)", fontWeight: 600, lineHeight: 1.35,
+              fontSize: "clamp(22px, 5vw, 28px)", fontWeight: 600, lineHeight: 1.35,
               marginBottom: 36, color: "#eee",
             }}>
               {q.text}
@@ -545,7 +545,7 @@ export default function App() {
                     border: `1px solid ${selected === i ? "#b8860b" : "#1e1e1e"}`,
                     background: selected === i ? "#b8860b15" : "#141414",
                     color: selected === i ? "#b8860b" : "#bbb",
-                    fontSize: 15, lineHeight: 1.4, cursor: "pointer",
+                    fontSize: 16, lineHeight: 1.4, cursor: "pointer",
                     fontFamily: "'DM Sans', sans-serif",
                     transition: "all 0.2s ease",
                   }}
@@ -573,7 +573,7 @@ export default function App() {
 
         <FadeIn>
           <div style={{
-            fontSize: 13, textTransform: "uppercase", letterSpacing: 4,
+            fontSize: 14, textTransform: "uppercase", letterSpacing: 4,
             color: "#b8860b", marginBottom: 10, fontFamily: "'JetBrains Mono', monospace",
           }}>
             Your Reality Check
@@ -597,14 +597,14 @@ export default function App() {
             background: "#141414", border: "1px solid #1e1e1e",
             borderRadius: 20, padding: "6px 14px",
           }}>
-            <span style={{ fontSize: 13, color: "#555", fontFamily: "'JetBrains Mono', monospace" }}>Score</span>
-            <span style={{ fontSize: 15, fontWeight: 600, color: "#b8860b", fontFamily: "'JetBrains Mono', monospace" }}>{score}/40</span>
+            <span style={{ fontSize: 14, color: "#555", fontFamily: "'JetBrains Mono', monospace" }}>Score</span>
+            <span style={{ fontSize: 16, fontWeight: 600, color: "#b8860b", fontFamily: "'JetBrains Mono', monospace" }}>{score}/40</span>
           </div>
         </FadeIn>
 
         <FadeIn delay={300}>
           <p style={{
-            fontSize: 17, color: "#888", lineHeight: 1.5,
+            fontSize: 19, color: "#888", lineHeight: 1.5,
             marginTop: 4, marginBottom: 0, fontStyle: "italic",
             borderLeft: "2px solid #b8860b", paddingLeft: 16,
           }}>
@@ -616,7 +616,7 @@ export default function App() {
           <StageBar currentStage={stageIdx} />
           {stageIdx < 3 && (
             <div style={{
-              textAlign: "center", fontSize: 13, color: "#555",
+              textAlign: "center", fontSize: 14, color: "#555",
               fontFamily: "'JetBrains Mono', monospace", marginTop: 2,
             }}>
               {STAGES[3].range[0] - score} points to Stage 4
@@ -631,7 +631,7 @@ export default function App() {
             border: "1px solid #1e1e1e",
           }}>
             <div style={{
-              fontSize: 13, textTransform: "uppercase", letterSpacing: 2,
+              fontSize: 14, textTransform: "uppercase", letterSpacing: 2,
               color: "#555", marginBottom: 16, fontFamily: "'JetBrains Mono', monospace",
             }}>
               Your Time Leak
@@ -643,13 +643,13 @@ export default function App() {
               }}>
                 <AnimNum value={timeLeak.weekly} />
               </span>
-              <span style={{ fontSize: 16, color: "#666" }}>hrs/week</span>
+              <span style={{ fontSize: 18, color: "#666" }}>hrs/week</span>
             </div>
-            <div style={{ fontSize: 14, color: "#666", marginTop: 6 }}>
+            <div style={{ fontSize: 16, color: "#666", marginTop: 6 }}>
               Estimated hours spent on tasks AI could handle
             </div>
             <div style={{
-              fontSize: 14, color: "#ef4444", marginTop: 12,
+              fontSize: 16, color: "#ef4444", marginTop: 12,
               paddingTop: 12, borderTop: "1px solid #1e1e1e",
             }}>
               Over a year, that's approximately <span style={{ fontWeight: 600 }}>{timeLeak.yearly} work-weeks</span> of your life.
@@ -674,12 +674,12 @@ export default function App() {
             border: "1px solid #2a2010",
           }}>
             <div style={{
-              fontSize: 13, textTransform: "uppercase", letterSpacing: 2,
+              fontSize: 14, textTransform: "uppercase", letterSpacing: 2,
               color: "#b8860b", marginBottom: 14, fontFamily: "'JetBrains Mono', monospace",
             }}>
               Your One Move
             </div>
-            <p style={{ fontSize: 15, lineHeight: 1.6, color: "#ccc", margin: 0 }}>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: "#ccc", margin: 0 }}>
               {stage.action}
             </p>
           </div>
@@ -698,12 +698,12 @@ export default function App() {
               border: "1px solid #1e1e1e",
             }}>
               <div style={{
-                fontSize: 12, textTransform: "uppercase", letterSpacing: 1.5,
+                fontSize: 13, textTransform: "uppercase", letterSpacing: 1.5,
                 color: "#555", marginBottom: 8, fontFamily: "'JetBrains Mono', monospace",
               }}>
                 Challenge Someone
               </div>
-              <div style={{ fontSize: 14, color: "#999", lineHeight: 1.5, fontStyle: "italic" }}>
+              <div style={{ fontSize: 15, color: "#999", lineHeight: 1.5, fontStyle: "italic" }}>
                 "{shareText}"
               </div>
             </div>
@@ -715,7 +715,7 @@ export default function App() {
                   padding: "14px 24px", borderRadius: 8,
                   background: copied ? "#22c55e" : "#b8860b",
                   color: "#fff", border: "none",
-                  fontSize: 14, fontWeight: 600, cursor: "pointer",
+                  fontSize: 15, fontWeight: 600, cursor: "pointer",
                   fontFamily: "'DM Sans', sans-serif",
                   transition: "all 0.2s ease",
                 }}
@@ -729,7 +729,7 @@ export default function App() {
                   padding: "14px 24px", borderRadius: 8,
                   background: "transparent",
                   color: "#666", border: "1px solid #222",
-                  fontSize: 14, fontWeight: 500, cursor: "pointer",
+                  fontSize: 15, fontWeight: 500, cursor: "pointer",
                   fontFamily: "'DM Sans', sans-serif",
                   transition: "all 0.2s ease",
                 }}
@@ -744,7 +744,7 @@ export default function App() {
 
         <FadeIn delay={1200}>
           <div style={{
-            textAlign: "center", fontSize: 13, color: "#444",
+            textAlign: "center", fontSize: 15, color: "#888",
             marginTop: 48, paddingBottom: 24,
             fontFamily: "'JetBrains Mono', monospace",
           }}>
