@@ -312,10 +312,13 @@ function EmailCapture({ stageIdx }) {
   const [focused, setFocused] = useState(false);
   const valid = email.includes("@") && email.includes(".");
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (valid) {
-      // In production: POST to your backend / email service / webhook
-      console.log("Captured:", { email, stage: stageIdx + 1 });
+      await fetch("https://formspree.io/f/mqeyeann", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, stage: stageIdx + 1 }),
+      });
       setSubmitted(true);
     }
   };
